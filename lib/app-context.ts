@@ -40,7 +40,17 @@ export interface AppStore {
 export const useAppStore = create<AppStore>((set) => ({
   language: "fr",
   setLanguage: (lang) => set({ language: lang }),
-  user: null,
+  user: {
+    id: "u1",
+    firstName: "Ayoub",
+    lastName: "Fakraoui",
+    email: "ayoub.fakraoui@cih.ma",
+    phone: "+212600000000",
+    cin: "A123456",
+    contractId: "C987654",
+    rib: "123456789012345678901234",
+    situation: "Active"
+  },
   setUser: (user) => set({ user }),
   isAuthenticated: false,
   setIsAuthenticated: (auth) => set({ isAuthenticated: auth }),

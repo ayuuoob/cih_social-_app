@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { RTLProvider } from "@/components/rtl-provider"
 import { MobileHeader } from "@/components/mobile-header"
+import { M3akChatbot } from "@/components/m3ak-chatbot"
 import "./globals.css"
 
 const geist = Geist({ subsets: ["latin", "arabic"] })
@@ -46,6 +47,7 @@ export default function RootLayout({
             <MobileHeader />
             <main className="flex-1 overflow-y-auto">{children}</main>
           </div>
+          <M3akChatbot />
         </RTLProvider>
         <Analytics />
       </body>

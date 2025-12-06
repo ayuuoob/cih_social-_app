@@ -8,7 +8,7 @@ interface MobileHeaderProps {
   title?: string
 }
 
-export function MobileHeader({ title = "CIH Care" }: MobileHeaderProps) {
+export function MobileHeader({ title = "CIH Social+" }: MobileHeaderProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const { language } = useAppStore()
 
@@ -24,11 +24,17 @@ export function MobileHeader({ title = "CIH Care" }: MobileHeaderProps) {
           </button>
 
           {/* Logo & Title */}
-          <div className="flex-1 flex items-center justify-center lg:justify-start gap-2">
-            <span className="text-2xl">❤️</span>
+          <div className="flex-1 flex items-center justify-center lg:justify-start gap-3">
+            <div className="w-8 h-8 relative overflow-hidden bg-white rounded-full">
+              <img
+                src="/cih-social-logo.jpg"
+                alt="CIH Social+ Logo"
+                className="w-full h-full object-contain"
+              />
+            </div>
             <div>
               <h1 className="font-bold text-white text-sm">{title}</h1>
-              <p className="text-xs text-blue-100">CIH Care</p>
+              <p className="text-xs text-blue-100">CIH Social+</p>
             </div>
           </div>
 

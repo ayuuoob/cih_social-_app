@@ -9,13 +9,13 @@ import { getTranslation } from "@/lib/i18n"
 
 export default function SalaryRequestPage() {
   const router = useRouter()
-  const { language, addRequest } = useAppStore()
+  const { language, addRequest, user } = useAppStore()
   const t = (key: string) => getTranslation(key, language)
 
   const [formData, setFormData] = useState({
     amount: "",
-    employer: "",
-    contractType: "cdi",
+    employer: "Orange Business", // Pre-filled
+    contractType: "cdi", // Pre-filled
   })
   const [loading, setLoading] = useState(false)
 
@@ -34,7 +34,10 @@ export default function SalaryRequestPage() {
       amount: Number.parseInt(formData.amount) || 3000,
       status: "pending" as const,
       createdAt: new Date().toISOString(),
-      data: formData,
+      data: {
+        ...formData,
+        user: user // Attach user info context
+      },
     }
 
     addRequest(request)
@@ -47,51 +50,41 @@ export default function SalaryRequestPage() {
       <h1 className="text-2xl font-bold cih-text-blue mb-2">{t("salary.title")}</h1>
       <p className="text-sm text-gray-600 mb-6">
         {language === "fr"
-          ? "Fournissez vos informations d'emploi pour demander une avance"
-          : "قدم معلومات التوظيف الخاصة بك لطلب سلفة"}
+          ? "Remplissez le montant souhaité. Vos informations sont déjà pré-remplies."
+          : "أدخل المبلغ المطلوب. معلوماتك معبأة مسبقًا."}
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-4 bg-white p-6 rounded-lg shadow-md border border-gray-100">
+        <div className="bg-gray-50 p-4 rounded-lg mb-4 text-sm text-gray-600 space-y-2 border border-gray-200">
+          <h3 className="font-semibold text-gray-800">{language === 'fr' ? "Informations Employé" : "معلومات الموظف"}</h3>
+          <p className="flex justify-between">
+            <span>{t("salary.employer")}:</span>
+            <span className="font-medium text-gray-900">Orange Business</span>
+          </p>
+          <p className="flex justify-between">
+            <span>{t("salary.contractType")}:</span>
+            <span className="font-medium text-gray-900">{t("salary.contractOptions.cdi")}</span>
+          </p>
+          <p className="flex justify-between">
+            <span>RIB:</span>
+            <span className="font-medium text-gray-900 font-mono">{user?.rib || "123..."}</span>
+          </p>
+        </div>
+
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">{t("salary.amount")}</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">{t("salary.amount")} (MAD)</label>
           <input
             type="number"
             name="amount"
             value={formData.amount}
             onChange={handleInputChange}
-            className="cih-input text-sm"
-            placeholder="3000"
+            className="cih-input text-lg font-bold text-blue-600"
+            placeholder="Ex: 5000"
             min="500"
             max="100000"
             required
+            autoFocus
           />
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">{t("salary.employer")}</label>
-          <input
-            type="text"
-            name="employer"
-            value={formData.employer}
-            onChange={handleInputChange}
-            className="cih-input text-sm"
-            required
-          />
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">{t("salary.contractType")}</label>
-          <select
-            name="contractType"
-            value={formData.contractType}
-            onChange={handleInputChange}
-            className="cih-input text-sm"
-            required
-          >
-            <option value="cdi">{t("salary.contractOptions.cdi")}</option>
-            <option value="cdd">{t("salary.contractOptions.cdd")}</option>
-            <option value="other">{t("salary.contractOptions.other")}</option>
-          </select>
         </div>
 
         <button type="submit" disabled={loading} className="cih-btn-primary w-full mt-6">

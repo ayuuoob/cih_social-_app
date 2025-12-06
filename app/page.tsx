@@ -13,14 +13,14 @@ export default function DashboardPage() {
     if (!user) {
       setUser({
         id: "1",
-        firstName: "Fatima",
-        lastName: "El Mansouri",
-        email: "fatima.mansouri@email.com",
+        firstName: "Ayoub",
+        lastName: "Fakraoui",
+        email: "ayoub.fakraoui@email.com",
         phone: "+212 6 12 34 56 78",
         cin: "AB123456",
         contractId: "CNT-2024-001",
-        rib: "BMCE123456789",
-        situation: "mourning",
+        rib: "123456789012345678901234",
+        situation: "active",
       })
       setIsAuthenticated(true)
     }
