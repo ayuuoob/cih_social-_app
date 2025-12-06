@@ -1,30 +1,60 @@
-# CIH Care app
+🌟 CIH Care App
+🌐 Aperçu
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+CIH Care est une application mobile pensée pour accompagner les personnes en situation de vulnérabilité (santé, décès, précarité…) en leur offrant un accès simplifié à un e-wallet, des aides sociales, des avances CNSS et un suivi clair de leurs demandes.
+Ce dépôt contient le code source complet de l'application ainsi que son historique de mises à jour.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/auoubfakraoui-1144s-projects/v0-cih-care-app)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/tZBJLmnnjtD)
+🚀 Déploiement
 
-## Overview
+L’application est actuellement accessible en ligne à l'adresse suivante :
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+👉 https://vercel.com/auoubfakraoui-1144s-projects/v0-cih-care-app
 
-## Deployment
+Vous pouvez consulter, tester et naviguer dans toutes les fonctionnalités directement depuis cette version déployée.
 
-Your project is live at:
+🛠️ Développement & Améliorations
 
-**[https://vercel.com/auoubfakraoui-1144s-projects/v0-cih-care-app](https://vercel.com/auoubfakraoui-1144s-projects/v0-cih-care-app)**
+Ce projet évolue en continu.
+À chaque mise à jour du code ou ajout d’une fonctionnalité, une nouvelle version est automatiquement déployée.
 
-## Build your app
+Vous pouvez continuer à développer, améliorer l’interface ou enrichir les fonctionnalités directement dans ce dépôt.
+Chaque commit déclenche une nouvelle mise en production via Vercel.
 
-Continue building your app on:
+📦 Fonctionnalités Principales
 
-**[https://v0.app/chat/tZBJLmnnjtD](https://v0.app/chat/tZBJLmnnjtD)**
+E-wallet CIH Care
 
-## How It Works
+Consultation du solde
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+Historique des transactions
+
+Demandes d’avances (décès, obsèques, remboursement CNSS, micro-crédit, avance salaire)
+
+Interface mobile-first
+
+Menu latéral complet
+
+Chatbot intelligent (FR / Darija)
+
+Système multilingue (Français / Arabe – RTL)
+
+🧩 Structure du Projet
+
+/app - pages et vues principales
+
+/components - composants UI réutilisables
+
+/lib - gestion des données mockées, helpers
+
+/public - assets, images, logo CIH Care
+
+/styles - configuration TailwindCSS
+
+🤝 Contribution
+
+Toutes les contributions sont les bienvenues :
+améliorations UI, optimisation des pages, création de nouvelles fonctionnalités ou corrections.
+
+📄 Licence
+
+Ce projet est sous licence libre. Vous pouvez l'utiliser, le modifier et le déployer librement.
