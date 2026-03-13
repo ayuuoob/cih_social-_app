@@ -54,14 +54,14 @@ export function SidebarMenu({ isOpen, onClose }: SidebarMenuProps) {
             {/* Logo Image */}
             <div className="w-10 h-10 relative overflow-hidden">
               <img
-                src="/cih-social-logo.jpg"
-                alt="CIH Social+ Logo"
+                src="/socialflow-icon.png"
+                alt="SocialFlow Logo"
                 className="w-full h-full object-contain"
               />
             </div>
             <div>
-              <h1 className="font-bold text-lg cih-text-blue">CIH Social+</h1>
-              <p className="text-xs text-gray-600">{language === "fr" ? "Sécurité financière" : "الأمان المالي"}</p>
+              <h1 className="font-bold text-lg"><span style={{ color: '#1F2F56' }}>Social</span><span style={{ color: '#2E7D32' }}>Flow</span></h1>
+              <p className="text-xs text-gray-600">{language === "fr" ? "Instant Social Finance" : "التمويل الاجتماعي"}</p>
             </div>
           </div>
         </div>
@@ -90,14 +90,14 @@ export function SidebarMenu({ isOpen, onClose }: SidebarMenuProps) {
           <div className="mb-4 flex gap-2">
             <button
               onClick={() => setLanguage("fr")}
-              className={`flex-1 px-3 py-2 rounded text-sm font-medium transition-colors ${language === "fr" ? "cih-bg-orange text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+              className={`flex-1 px-3 py-2 rounded text-sm font-medium transition-colors ${language === "fr" ? "sf-bg-green text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
             >
               FR
             </button>
             <button
               onClick={() => setLanguage("ar")}
-              className={`flex-1 px-3 py-2 rounded text-sm font-medium transition-colors ${language === "ar" ? "cih-bg-orange text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+              className={`flex-1 px-3 py-2 rounded text-sm font-medium transition-colors ${language === "ar" ? "sf-bg-green text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
             >
               AR

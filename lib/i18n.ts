@@ -5,7 +5,7 @@ export const translations = {
   fr: {
     // Header & Navigation
     header: {
-      title: "CIH Care",
+      title: "SocialFlow",
       language: "Langue",
       logout: "Déconnexion",
     },
@@ -17,7 +17,7 @@ export const translations = {
     },
     // Onboarding
     onboarding: {
-      title: "CIH Care",
+      title: "SocialFlow",
       subtitle: "Votre filet de sécurité financière en cas de coup dur",
       description: "Solutions d'aide financière pour les situations de vulnérabilité",
       login: "Se connecter",
@@ -47,7 +47,7 @@ export const translations = {
       statusPriority: "Prioritaire",
       statusHighVulnerability: "Fragilité élevée",
       recentTransactions: "Dernières transactions",
-      myRequests: "Mes demandes CIH Care",
+      myRequests: "Mes demandes SocialFlow",
       availableServices: "Services disponibles",
     },
     // Services
@@ -111,7 +111,7 @@ export const translations = {
       cnssNumber: "Numéro d'immatriculation CNSS",
       fileNumber: "Numéro du dossier CNSS",
       description:
-        "Vous avez un dossier de remboursement médical déposé à la CNSS. CIH Care peut vous verser une avance avant le remboursement.",
+        "Vous avez un dossier de remboursement médical déposé à la CNSS. SocialFlow peut vous verser une avance avant le remboursement.",
     },
     // Microcredit
     microcredit: {
@@ -153,7 +153,7 @@ export const translations = {
       details: "Détails",
       timeline: "Chronologie",
       submitted: "Demande déposée",
-      analyzing: "Analyse CIH",
+      analyzing: "Analyse SocialFlow",
       validating: "Validation CNSS",
       paid: "Avance versée",
       transactionRef: "Référence de transaction",
@@ -199,7 +199,7 @@ export const translations = {
   ar: {
     // Header & Navigation
     header: {
-      title: "CIH Care",
+      title: "SocialFlow",
       language: "اللغة",
       logout: "تسجيل الخروج",
     },
@@ -211,7 +211,7 @@ export const translations = {
     },
     // Onboarding
     onboarding: {
-      title: "CIH Care",
+      title: "SocialFlow",
       subtitle: "شبكة الأمان المالية الخاصة بك في أوقات الأزمات",
       description: "حلول المساعدة المالية للحالات الضعيفة",
       login: "تسجيل الدخول",
@@ -241,7 +241,7 @@ export const translations = {
       statusPriority: "أولوية",
       statusHighVulnerability: "هشاشة عالية",
       recentTransactions: "آخر المعاملات",
-      myRequests: "طلباتي من CIH Care",
+      myRequests: "طلباتي من SocialFlow",
       availableServices: "الخدمات المتاحة",
     },
     // Services
@@ -304,7 +304,7 @@ export const translations = {
       cin: "رقم الهوية الوطنية",
       cnssNumber: "رقم التسجيل CNSS",
       fileNumber: "رقم الملف CNSS",
-      description: "لديك ملف تسديد طبي مودع لدى CNSS. يمكن لـ CIH Care أن توفر لك سلفة قبل التسديد.",
+      description: "لديك ملف تسديد طبي مودع لدى CNSS. يمكن لـ SocialFlow أن توفر لك سلفة قبل التسديد.",
     },
     // Microcredit
     microcredit: {
@@ -345,7 +345,7 @@ export const translations = {
       details: "التفاصيل",
       timeline: "الجدول الزمني",
       submitted: "تم تقديم الطلب",
-      analyzing: "تحليل CIH",
+      analyzing: "تحليل SocialFlow",
       validating: "التحقق من CNSS",
       paid: "تم صرف السلفة",
       transactionRef: "رقم المعاملة",

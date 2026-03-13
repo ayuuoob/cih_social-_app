@@ -40,7 +40,7 @@ export default function WalletPage() {
         <p className="text-sm opacity-90 mb-2">{language === "fr" ? "Solde actuel" : "الرصيد الحالي"}</p>
         <h2 className="text-3xl font-bold mb-4">2 350,00 MAD</h2>
         <div className="space-y-1 text-xs opacity-90">
-          <p>{language === "fr" ? "Compte CIH Care" : "حساب CIH Care"}</p>
+          <p>{language === "fr" ? "Compte SocialFlow" : "حساب SocialFlow"}</p>
           <p>CNT-2024-001</p>
         </div>
       </div>

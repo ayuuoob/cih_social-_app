@@ -60,7 +60,7 @@ export const walletApi = {
     otp: string
     token: string
   }): Promise<WalletResponse> {
-    const contractId = `CIH-${Date.now()}`
+    const contractId = `SF-${Date.now()}`
     const rib = `${Math.random().toString().substring(2, 11)}-${Math.random().toString().substring(2, 15)}`
 
     mockWallets.set(contractId, {

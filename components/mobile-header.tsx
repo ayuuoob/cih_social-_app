@@ -8,13 +8,13 @@ interface MobileHeaderProps {
   title?: string
 }
 
-export function MobileHeader({ title = "CIH Social+" }: MobileHeaderProps) {
+export function MobileHeader({ title = "SocialFlow" }: MobileHeaderProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const { language } = useAppStore()
 
   return (
     <>
-      <header className="cih-header sticky top-0 z-30 px-4 py-3 shadow-md">
+      <header className="sf-header sticky top-0 z-30 px-4 py-3 shadow-md">
         <div className="flex items-center justify-between">
           {/* Burger Menu */}
           <button onClick={() => setSidebarOpen(!sidebarOpen)} className="flex flex-col gap-1 lg:hidden">
@@ -27,14 +27,14 @@ export function MobileHeader({ title = "CIH Social+" }: MobileHeaderProps) {
           <div className="flex-1 flex items-center justify-center lg:justify-start gap-3">
             <div className="w-8 h-8 relative overflow-hidden bg-white rounded-full">
               <img
-                src="/cih-social-logo.jpg"
-                alt="CIH Social+ Logo"
+                src="/socialflow-icon.png"
+                alt="SocialFlow Logo"
                 className="w-full h-full object-contain"
               />
             </div>
             <div>
               <h1 className="font-bold text-white text-sm">{title}</h1>
-              <p className="text-xs text-blue-100">CIH Social+</p>
+              <p className="text-xs text-blue-100">Instant Social Finance</p>
             </div>
           </div>
 

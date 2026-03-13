@@ -33,7 +33,7 @@ export const chatbotResponses = {
     {
       trigger: ["aide", "help", "besoin"],
       response:
-        "Je suis M3ak, votre assistant CIH Care. Je peux vous aider avec: les demandes d'avance, les informations sur les services, et les questions générales.",
+        "Je suis M3ak, votre assistant SocialFlow. Je peux vous aider avec: les demandes d'avance, les informations sur les services, et les questions générales.",
     },
   ],
   ar: [
@@ -67,15 +67,15 @@ export const chatbotResponses = {
     },
     {
       trigger: ["مساعدة", "help", "احتاج"],
-      response: "أنا M3ak، مساعدك في CIH Care. يمكنني أن أساعدك في: طلبات السلف، معلومات عن الخدمات، والأسئلة العامة.",
+      response: "أنا M3ak، مساعدك في SocialFlow. يمكنني أن أساعدك في: طلبات السلف، معلومات عن الخدمات، والأسئلة العامة.",
     },
   ],
 }
 
 export const getDefaultResponse = (lang: "fr" | "ar") => {
   return lang === "fr"
-    ? "Bonjour! Je suis M3ak, votre assistant CIH Care. Comment puis-je vous aider aujourd'hui?"
-    : "السلام عليكم! أنا M3ak، مساعدك في CIH Care. كيف يمكنني مساعدتك اليوم؟"
+    ? "Bonjour! Je suis M3ak, votre assistant SocialFlow. Comment puis-je vous aider aujourd'hui?"
+    : "السلام عليكم! أنا M3ak، مساعدك في SocialFlow. كيف يمكنني مساعدتك اليوم؟"
 }
 
 export const getChatbotResponse = (message: string, lang: "fr" | "ar") => {
