@@ -44,7 +44,7 @@ export const useAppStore = create<AppStore>((set) => ({
     id: "u1",
     firstName: "Ayoub",
     lastName: "Fakraoui",
-    email: "ayoub.fakraoui@socialflow.ma",
+    email: "ayoub.fakraoui@cih.ma",
     phone: "+212600000000",
     cin: "A123456",
     contractId: "C987654",

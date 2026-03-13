@@ -44,7 +44,7 @@ export default function DashboardPage() {
       <div className="max-w-4xl mx-auto px-4 py-6 md:py-8">
         {/* User Information Section Removed */}
 
-        <div className="bg-gradient-to-r from-[#1F2F56] to-[#162240] rounded-lg shadow-md p-6 mb-6 text-white">
+        <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg shadow-md p-6 mb-6 text-white">
           <h2 className="text-lg md:text-xl font-bold mb-4 opacity-90">
             {language === "fr" ? "Mon e-wallet" : "محفظتي الإلكترونية"}
           </h2>

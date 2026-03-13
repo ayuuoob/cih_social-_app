@@ -1,19 +1,18 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, Geist, Geist_Mono } from "next/font/google"
+import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { RTLProvider } from "@/components/rtl-provider"
 import { MobileHeader } from "@/components/mobile-header"
 import { M3akChatbot } from "@/components/m3ak-chatbot"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const geist = Geist({ subsets: ["latin", "arabic"] })
 const geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "SocialFlow — Instant Social Finance",
-  description: "Solutions de financement social instantané pour les situations de vulnérabilité",
+  title: "CIH Care - Filet de Sécurité Financière",
+  description: "Solutions d'aide financière pour les situations de vulnérabilité",
   generator: "v0.app",
   viewport: {
     width: "device-width",
@@ -42,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" dir="ltr">
-      <body className={`${inter.variable} ${geist.className} antialiased bg-[#F5F7FA]`}>
+      <body className={`${geist.className} antialiased bg-[#F5F7FA]`}>
         <RTLProvider>
           <div className="flex flex-col lg:flex-row min-h-screen">
             <MobileHeader />

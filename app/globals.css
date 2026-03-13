@@ -4,27 +4,26 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* SocialFlow color palette */
+  /* CIH Care color palette */
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
 
-  /* SocialFlow Brand Colors */
-  --sf-navy: #1F2F56;
-  --sf-green: #2E7D32;
-  --sf-gold: #C9A227;
-  --sf-gray-light: #f5f7fa;
-  --sf-gray-dark: #333333;
-  --sf-white: #ffffff;
+  /* CIH Brand Colors */
+  --cih-blue: #0078a8;
+  --cih-orange: #f58220;
+  --cih-gray-light: #f5f7fa;
+  --cih-gray-dark: #333333;
+  --cih-white: #ffffff;
 
-  --primary: var(--sf-navy);
+  --primary: var(--cih-blue);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: var(--sf-green);
+  --secondary: var(--cih-orange);
   --secondary-foreground: oklch(0.985 0 0);
-  --muted: var(--sf-gray-light);
+  --muted: var(--cih-gray-light);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: var(--sf-green);
+  --accent: var(--cih-orange);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
@@ -34,18 +33,18 @@
 
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --chart-1: #1F2F56;
-  --chart-2: #2E7D32;
-  --chart-3: #C9A227;
-  --chart-4: #3a5a9f;
-  --chart-5: #4CAF50;
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
   --radius: 0.625rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: var(--sf-navy);
+  --sidebar-primary: oklch(0.205 0 0);
   --sidebar-primary-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: var(--sf-navy);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 }
@@ -56,26 +55,26 @@
   --card: oklch(0.145 0 0);
   --card-foreground: oklch(0.985 0 0);
   --primary: oklch(0.985 0 0);
-  --primary-foreground: var(--sf-navy);
-  --secondary: var(--sf-green);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: var(--cih-orange);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
-  --accent: var(--sf-green);
+  --accent: var(--cih-orange);
   --accent-foreground: oklch(0.985 0 0);
   --border: oklch(0.269 0 0);
   --input: oklch(0.269 0 0);
   --popover: oklch(0.145 0 0);
   --popover-foreground: oklch(0.985 0 0);
   --ring: oklch(0.439 0 0);
-  --chart-1: #3a5a9f;
-  --chart-2: #4CAF50;
-  --chart-3: #C9A227;
-  --chart-4: #1F2F56;
-  --chart-5: #2E7D32;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: #3a5a9f;
+  --sidebar-primary: oklch(0.488 0.243 264.376);
   --sidebar-primary-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.269 0 0);
   --sidebar-accent-foreground: oklch(0.985 0 0);
@@ -84,7 +83,7 @@
 }
 
 @theme inline {
-  --font-sans: "Inter", "Geist", "Geist Fallback", sans-serif;
+  --font-sans: "Geist", "Geist Fallback";
   --font-mono: "Geist Mono", "Geist Mono Fallback";
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -128,20 +127,16 @@
   * {
     @apply border-border outline-ring/50;
   }
-
   body {
     @apply bg-background text-foreground;
   }
-
   html {
     @apply scroll-smooth;
   }
-
   html[dir="rtl"] {
     direction: rtl;
     text-align: right;
   }
-
   html[dir="ltr"] {
     direction: ltr;
     text-align: left;
@@ -149,140 +144,45 @@
 }
 
 @layer components {
-
-  /* SocialFlow Brand Utilities */
-  .sf-header {
-    background-color: var(--sf-navy);
+  /* CIH Brand Utilities */
+  .cih-header {
+    background-color: var(--cih-blue);
     color: white;
   }
 
-  .sf-bg-green {
-    background-color: var(--sf-green);
+  .cih-bg-orange {
+    background-color: var(--cih-orange);
   }
 
-  .sf-bg-gold {
-    background-color: var(--sf-gold);
+  .cih-text-blue {
+    color: var(--cih-blue);
   }
 
-  .sf-text-navy {
-    color: var(--sf-navy);
-  }
-
-  .sf-text-green {
-    color: var(--sf-green);
-  }
-
-  .sf-text-gold {
-    color: var(--sf-gold);
-  }
-
-  .sf-gradient {
-    background: linear-gradient(to right, var(--sf-navy), #162240);
+  .cih-gradient {
+    background: linear-gradient(to right, var(--cih-blue), #005f87);
     color: white;
   }
 
-  .sf-nav-active {
-    background-color: var(--sf-navy);
+  .cih-nav-active {
+    background-color: var(--cih-blue);
     color: white;
     font-size: 0.875rem;
   }
 
   /* Button Classes */
-  .sf-btn-primary {
-    background-color: var(--sf-navy);
-    color: white;
-    padding: 0.75rem 1rem;
-    border-radius: 0.5rem;
-    font-weight: 500;
-    transition-property: background-color;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
-  }
-
-  .sf-btn-primary:hover {
-    background-color: #162240;
-  }
-
-  .sf-btn-primary:disabled {
-    opacity: 0.5;
-  }
-
-  .sf-btn-secondary {
-    background-color: var(--sf-green);
-    color: white;
-    padding: 0.75rem 1rem;
-    border-radius: 0.5rem;
-    font-weight: 500;
-    transition-property: background-color;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
-  }
-
-  .sf-btn-secondary:hover {
-    background-color: #256b29;
-  }
-
-  .sf-btn-secondary:disabled {
-    opacity: 0.5;
-  }
-
-  .sf-input {
-    width: 100%;
-    padding: 0.5rem 1rem;
-    border: 1px solid rgb(209, 213, 219);
-    border-radius: 0.5rem;
-    background-color: white;
-  }
-
-  .sf-input:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px var(--sf-navy);
-  }
-
-  .sf-card {
-    background-color: white;
-    border-radius: 0.5rem;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    border: 1px solid rgb(243, 244, 246);
-  }
-
-  /* Backward compatibility aliases */
-  .cih-header {
-    background-color: var(--sf-navy);
-    color: white;
-  }
-
-  .cih-bg-orange {
-    background-color: var(--sf-green);
-  }
-
-  .cih-text-blue {
-    color: var(--sf-navy);
-  }
-
-  .cih-gradient {
-    background: linear-gradient(to right, var(--sf-navy), #162240);
-    color: white;
-  }
-
-  .cih-nav-active {
-    background-color: var(--sf-navy);
-    color: white;
-    font-size: 0.875rem;
-  }
-
   .cih-btn-primary {
-    background-color: var(--sf-navy);
+    background-color: var(--cih-blue);
     color: white;
     padding: 0.75rem 1rem;
     border-radius: 0.5rem;
     font-weight: 500;
-    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
   }
 
   .cih-btn-primary:hover {
-    background-color: #162240;
+    background-color: #005f87;
   }
 
   .cih-btn-primary:disabled {
@@ -290,16 +190,18 @@
   }
 
   .cih-btn-secondary {
-    background-color: var(--sf-green);
+    background-color: var(--cih-orange);
     color: white;
     padding: 0.75rem 1rem;
     border-radius: 0.5rem;
     font-weight: 500;
-    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
   }
 
   .cih-btn-secondary:hover {
-    background-color: #256b29;
+    background-color: #d97318;
   }
 
   .cih-btn-secondary:disabled {
@@ -316,7 +218,7 @@
 
   .cih-input:focus {
     outline: none;
-    box-shadow: 0 0 0 2px var(--sf-navy);
+    box-shadow: 0 0 0 2px var(--cih-blue);
   }
 
   .cih-card {
@@ -328,7 +230,6 @@
   }
 
   /* RTL specific adjustments */
-  html[dir="rtl"] .sf-input,
   html[dir="rtl"] .cih-input {
     text-align: right;
   }
@@ -345,7 +246,6 @@
 }
 
 @layer utilities {
-
   /* Flexbox utilities for RTL */
   html[dir="rtl"] .flex {
     direction: rtl;
